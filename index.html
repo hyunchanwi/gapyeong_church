@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="가평교회 - 안식일을 지키는 교회, 하나님의 사랑을 전하는 공동체">
+    <title>가평교회 - Welcome</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#3d5a80',
+                        'darker-blue': '#2c4058',
+                        'soft-gray': '#F2F2F7',
+                        'text-gray': '#8E8E93',
+                        'accent-yellow': '#98c1d9',
+                    },
+                    fontFamily: {
+                        'sans': ['Noto Sans KR', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 2px 8px rgba(0, 0, 0, 0.08)',
+                        'soft-lg': '0 4px 16px rgba(0, 0, 0, 0.12)',
+                    },
+                    borderRadius: {
+                        'DEFAULT': '16px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .close-modal:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-dark-blue shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="uploaded_image_1765007580091.png" alt="가평교회 로고" class="h-10 w-auto">
+                    <h1 class="text-2xl font-bold text-white">가평교회</h1>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회소개</a>
+                    <a href="#worship"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">예배안내</a>
+                    <a href="#sermon"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">말씀</a>
+                    <a href="#news"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회소식</a>
+                    <a href="#departments"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">부서소개</a>
+                    <a href="#contact"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회문의</a>
+                    <a href="#donation"
+                        class="text-gray-200 hover:text-accent-yellow transition-colors duration-200">온라인헌금</a>
+                </nav>
+
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#about"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회소개</a>
+                <a href="#worship"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">예배안내</a>
+                <a href="#sermon"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">말씀</a>
+                <a href="#news"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회소식</a>
+                <a href="#departments"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">부서소개</a>
+                <a href="#contact"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">교회문의</a>
+                <a href="#donation"
+                    class="block text-gray-200 hover:text-accent-yellow transition-colors duration-200">온라인헌금</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-dark-blue to-darker-blue text-white py-24 md:py-32">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0"
+                    style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">가평교회에 오신 것을<br>환영합니다</h2>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">하나님의 사랑과 은혜가 가득한 공동체</p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#worship"
+                            class="bg-accent-yellow text-darker-blue px-8 py-3 rounded-2xl font-semibold hover:shadow-soft-lg transition-all duration-200">
+                            예배 안내
+                        </a>
+                        <button onclick="openMapNavigation()"
+                            class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-2xl font-semibold hover:bg-white hover:text-darker-blue transition-all duration-200">
+                            오시는 길
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Worship Section - 수정: 본당 2층 -->
+        <section id="worship" class="py-16 md:py-24 bg-soft-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">예배 안내</h2>
+                    <p class="text-lg text-text-gray">하나님께 예배드리는 시간</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-soft-lg p-8 md:p-12">
+                        <div class="text-6xl text-center mb-6">📖</div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">안식일예배</h3>
+
+                        <div class="space-y-4 text-center">
+                            <p class="text-xl text-gray-700">
+                                <span class="font-semibold">매주 토요일 오전 11시</span>
+                            </p>
+                            <p class="text-lg text-text-gray">본당 2층 예배실</p>
+                            <p class="text-base text-gray-600 mt-6 leading-relaxed">
+                                안식일을 거룩하게 지키며 하나님께 예배드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">교회 소개</h2>
+                    <p class="text-lg text-text-gray">가평교회를 소개합니다</p>
+                </div>
+
+                <div id="churchIntroContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- 로딩 중 표시 -->
+                    <div class="col-span-full text-center py-12">
+                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-dark-blue"></div>
+                        <p class="mt-4 text-gray-600">교회 소개를 불러오는 중...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Duty Section (봉사 당번) -->
+        <section id="duty" class="py-12 bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                        이번 주 섬기는 분들
+                        <span id="dutyDate" class="text-xl font-normal text-dark-blue ml-2"></span>
+                    </h2>
+                    <p class="text-text-gray">기쁨으로 섬기는 손길들입니다</p>
+                </div>
+
+                <div id="dutyContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- 식사 당번 -->
+                    <div
+                        class="bg-soft-gray rounded-2xl p-6 flex items-center justify-between hover:shadow-soft-lg transition-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+                                🍚</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">식사 당번</h3>
+                                <p class="text-sm text-gray-500 mt-1">데이터 없음</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 청소 당번 -->
+                    <div
+                        class="bg-soft-gray rounded-2xl p-6 flex items-center justify-between hover:shadow-soft-lg transition-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">🧹
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">청소 당번</h3>
+                                <p class="text-sm text-gray-500 mt-1">데이터 없음</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sermon Section -->
+        <section id="sermon" class="py-16 md:py-24 bg-soft-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">말씀</h2>
+                    <p class="text-lg text-text-gray">주간 설교 및 주보</p>
+                </div>
+
+                <!-- 설교 카드 캐러셀 -->
+                <div class="relative max-w-6xl mx-auto mb-12">
+                    <!-- 이전 버튼 -->
+                    <button id="prevSermon"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all hidden">
+                        <svg class="w-6 h-6 text-dark-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- 캐러셀 컨테이너 -->
+                    <div class="overflow-hidden">
+                        <div id="sermonContainer" class="flex transition-transform duration-500 ease-in-out gap-6">
+                            <!-- 로딩 중 표시 -->
+                            <div class="w-full text-center py-12">
+                                <div
+                                    class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-dark-blue">
+                                </div>
+                                <p class="mt-4 text-gray-600">설교 목록을 불러오는 중...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 다음 버튼 -->
+                    <button id="nextSermon"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all hidden">
+                        <svg class="w-6 h-6 text-dark-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">교회 소식</h2>
+                    <p class="text-lg text-text-gray">공지사항 및 행사 안내</p>
+                </div>
+
+                <div id="newsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- 로딩 중 표시 -->
+                    <div class="col-span-full text-center py-12">
+                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-dark-blue"></div>
+                        <p class="mt-4 text-gray-600">교회 소식을 불러오는 중...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Departments Section - 클릭 기능 추가 -->
+        <section id="departments" class="py-16 md:py-24 bg-soft-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">부서 소개</h2>
+                    <p class="text-lg text-text-gray">가평교회의 다양한 부서를 소개합니다</p>
+                </div>
+
+                <div id="departmentsContainer"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <!-- 로딩 중 표시 -->
+                    <div class="col-span-full text-center py-12">
+                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-dark-blue"></div>
+                        <p class="mt-4 text-gray-600">부서 소개를 불러오는 중...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section - 새로운 디자인 적용 및 주소 업데이트 -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">교회 문의</h2>
+                    <p class="text-lg text-text-gray">언제든지 연락주세요</p>
+                </div>
+
+                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- 연락처 정보 -->
+                    <div class="bg-soft-gray rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">연락처</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="text-3xl">📞</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">전화번호</h4>
+                                    <p class="text-lg text-dark-blue font-semibold">031-582-765</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-3xl">📍</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">주소</h4>
+                                    <p class="text-gray-700">경기도 가평군 석봉로 153번길 2</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-3xl">✉️</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">이메일</h4>
+                                    <p class="text-gray-700">info@gapyeong.church</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 문의하기 폼 -->
+                    <div class="bg-white border-2 border-soft-gray rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">문의하기</h3>
+
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">이름</label>
+                                <input type="text" placeholder="이름을 입력하세요"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-dark-blue">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">이메일</label>
+                                <input type="email" placeholder="이메일을 입력하세요"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-dark-blue">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">문의내용</label>
+                                <textarea rows="5" placeholder="문의하실 내용을 입력하세요"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-dark-blue resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-dark-blue text-white py-3 rounded-xl font-semibold hover:bg-darker-blue transition-colors">
+                                문의하기
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Section -->
+        <section id="donation" class="py-16 md:py-24 bg-soft-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">온라인 헌금</h2>
+                    <p class="text-lg text-text-gray">하나님께 드리는 감사의 헌금</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-soft-lg p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">헌금 안내</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            십일조, 감사헌금, 선교헌금 등 각종 헌금을 온라인으로 드릴 수 있습니다.
+                        </p>
+
+                        <div class="bg-soft-gray rounded-xl p-6 mb-6">
+                            <h4 class="text-lg font-bold text-gray-800 mb-4">계좌 정보</h4>
+                            <div class="space-y-2">
+                                <p class="text-gray-700"><span class="font-semibold">은행명:</span> OO은행</p>
+                                <p class="text-gray-700"><span class="font-semibold">계좌번호:</span> 000-0000-0000</p>
+                                <p class="text-gray-700"><span class="font-semibold">예금주:</span> 가평교회</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-text-gray text-center">
+                            ※ 입금 후 전화(031-582-765)로 연락 주시면 감사하겠습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">가평교회</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p>경기도 가평군 석봉로 153번길 2</p>
+                        <p>전화: 031-582-765</p>
+                        <p>안식일예배: 매주 토요일 오전 11시 (본당 2층)</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">바로가기</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">교회소개</a></li>
+                        <li><a href="#worship" class="text-gray-300 hover:text-white transition-colors">예배안내</a></li>
+                        <li><a href="#departments" class="text-gray-300 hover:text-white transition-colors">부서소개</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">교회문의</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 가평교회. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모달: 청년학생 선교회 -->
+    <div id="youthModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('youthModal')">&times;</button>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">청년학생 선교회</h2>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">청년교사</h3>
+                <p class="text-gray-600">신영빈</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">청년들</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <p class="text-gray-600">위현찬</p>
+                    <p class="text-gray-600">윤현석</p>
+                    <p class="text-gray-600">윤준석</p>
+                    <p class="text-gray-600">위현후</p>
+                    <p class="text-gray-600">조영은</p>
+                    <p class="text-gray-600">조영호</p>
+                    <p class="text-gray-600">문은성</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달: 패스파인더 -->
+    <div id="pathfinderModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('pathfinderModal')">&times;</button>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">패스파인더</h2>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">부원</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <p class="text-gray-600">신이한</p>
+                    <p class="text-gray-600">최하성</p>
+                    <p class="text-gray-600">심서희</p>
+                    <p class="text-gray-600">심서연</p>
+                    <p class="text-gray-600">심태현</p>
+                    <p class="text-gray-600">신세은</p>
+                    <p class="text-gray-600">신세현</p>
+                    <p class="text-gray-600">김하온</p>
+                    <p class="text-gray-600">최하엘</p>
+                    <p class="text-gray-600">권민준</p>
+                    <p class="text-gray-600">권여준</p>
+                    <p class="text-gray-600">김예온</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 모바일 메뉴 토글
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 모달 함수
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 모달 외부 클릭 시 닫기
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // 지도 네비게이션 열기
+        function openMapNavigation() {
+            const churchAddress = '경기도 가평군 석봉로 153번길 2';
+            const churchName = '가평교회';
+
+            // 카카오맵과 네이버 지도 중 선택할 수 있는 모달 생성
+            const mapModal = document.createElement('div');
+            mapModal.className = 'modal active';
+            mapModal.innerHTML = `
+                <div class="modal-content">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">오시는 길</h2>
+                    <p class="text-gray-600 mb-6">${churchAddress}</p>
+                    <div class="space-y-3">
+                        <button onclick="openKakaoMap()" class="w-full bg-yellow-400 text-gray-800 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition-colors">
+                            카카오맵으로 길찾기
+                        </button>
+                        <button onclick="openNaverMap()" class="w-full bg-green-500 text-white py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors">
+                            네이버 지도로 길찾기
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(mapModal);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 카카오맵 길찾기
+        function openKakaoMap() {
+            const churchAddress = '경기도 가평군 석봉로 153번길 2';
+            const churchName = '가평교회';
+            // 카카오맵 길찾기 URL - 주소 검색 후 길찾기
+            const kakaoMapUrl = `https://map.kakao.com/?q=${encodeURIComponent(churchAddress)}`;
+            window.open(kakaoMapUrl, '_blank');
+        }
+
+        // 네이버 지도 길찾기
+        function openNaverMap() {
+            const churchAddress = '경기도 가평군 석봉로 153번길 2';
+            // 네이버 지도 길찾기 URL - 현재 위치에서 목적지까지
+            const naverMapUrl = `https://map.naver.com/p/search/${encodeURIComponent(churchAddress)}`;
+            window.open(naverMapUrl, '_blank');
+        }
+
+        // 유튜브 영상 모달 열기
+        function openVideoModal(youtubeUrl) {
+            // 유튜브 URL을 embed 형식으로 변환
+            let videoId = '';
+
+            // 다양한 유튜브 URL 형식 처리
+            if (youtubeUrl.includes('youtube.com/live/')) {
+                videoId = youtubeUrl.split('youtube.com/live/')[1].split('?')[0];
+            } else if (youtubeUrl.includes('youtube.com/watch?v=')) {
+                videoId = youtubeUrl.split('v=')[1].split('&')[0];
+            } else if (youtubeUrl.includes('youtu.be/')) {
+                videoId = youtubeUrl.split('youtu.be/')[1].split('?')[0];
+            }
+
+            const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+            // 비디오 모달 생성
+            const videoModal = document.createElement('div');
+            videoModal.className = 'modal active';
+            videoModal.innerHTML = `
+                <div class="modal-content" style="max-width: 900px;">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">설교 영상</h2>
+                    <div class="aspect-video w-full">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="${embedUrl}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            style="border-radius: 12px;">
+                        </iframe>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(videoModal);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 주보 이미지 모달 열기
+        function openBulletinModal(imageUrl) {
+            const bulletinModal = document.createElement('div');
+            bulletinModal.className = 'modal active';
+            bulletinModal.innerHTML = `
+                <div class="modal-content" style="max-width: 900px;">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">주보</h2>
+                    <div class="w-full relative min-h-[50vh] flex flex-col items-center justify-center bg-gray-50 rounded-xl p-4">
+                        <img 
+                            src="${imageUrl}" 
+                            alt="주보" 
+                            class="w-full h-auto rounded-xl shadow-sm"
+                            onload="this.style.display='block'; this.nextElementSibling.style.display='none'"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                            style="display: block;"
+                        />
+                        <div class="hidden flex-col items-center justify-center text-center p-8 space-y-4">
+                            <div class="text-5xl mb-2">📄</div>
+                            <h3 class="text-xl font-bold text-gray-800">주보 이미지를 불러올 수 없습니다</h3>
+                            <p class="text-gray-600">보안 설정이나 브라우저 호환성 문제일 수 있습니다.</p>
+                            <a href="${imageUrl}" target="_blank" 
+                               class="bg-dark-blue text-white px-6 py-3 rounded-xl font-semibold hover:bg-darker-blue transition-colors mt-4">
+                                새 창에서 원본 보기
+                            </a>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <a href="${imageUrl}" target="_blank" class="text-sm text-gray-500 hover:text-dark-blue underline">
+                                이미지가 잘 안 보이시나요? 원본 보기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(bulletinModal);
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+
+    <!-- Google Sheets 연동 스크립트 -->
+    <script>
+        // Google Sheets에서 설교 데이터 로드
+        async function loadSermonsFromGoogleSheets() {
+            const spreadsheetId = '1zCHw0QEoPE-qYqC0kXTbK7jtjfsdF4lgg293yZGF0K0';
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&timestamp=${Date.now()}`;
+
+            const container = document.getElementById('sermonContainer');
+
+            try {
+                const response = await fetch(csvUrl);
+                const csvText = await response.text();
+
+                // CSV 파싱
+                const allRows = parseCSV(csvText);
+
+                // 첫 번째 행은 헤더이므로 제외
+                const dataRows = allRows.slice(1);
+
+                // 데이터가 없으면 샘플 데이터 표시
+                if (dataRows.length === 0 || (dataRows.length === 1 && dataRows[0][0] === '')) {
+                    // 샘플 설교 카드 표시
+                    container.innerHTML = `
+                        <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-2xl p-6 shadow-soft hover:shadow-soft-lg transition-shadow duration-200">
+                            <div class="text-sm text-dark-blue font-semibold mb-2">2025.12.06</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">최근 설교 제목</h3>
+                            <p class="text-text-gray text-sm mb-4">담임목사</p>
+                            <div class="flex gap-2">
+                                <button onclick="openVideoModal('https://youtube.com/live/6xumJ8-n95Y?feature=share')"
+                                    class="flex-1 bg-dark-blue text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-darker-blue transition-colors">
+                                    영상 보기
+                                </button>
+                                <button onclick="openBulletinModal('https://via.placeholder.com/800x1200/3d5a80/ffffff?text=주보+샘플')"
+                                    class="flex-1 border border-dark-blue text-dark-blue px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors">
+                                    주보 보기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-2xl p-6 shadow-soft hover:shadow-soft-lg transition-shadow duration-200">
+                            <div class="text-sm text-dark-blue font-semibold mb-2">2025.11.29</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">지난 주 설교 제목</h3>
+                            <p class="text-text-gray text-sm mb-4">담임목사</p>
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-dark-blue text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-darker-blue transition-colors">
+                                    영상 보기
+                                </button>
+                                <button onclick="openBulletinModal('https://via.placeholder.com/800x1200/3d5a80/ffffff?text=주보+샘플')"
+                                    class="flex-1 border border-dark-blue text-dark-blue px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors">
+                                    주보 보기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-2xl p-6 shadow-soft hover:shadow-soft-lg transition-shadow duration-200">
+                            <div class="text-sm text-dark-blue font-semibold mb-2">2025.11.22</div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">이전 설교 제목</h3>
+                            <p class="text-text-gray text-sm mb-4">담임목사</p>
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 bg-dark-blue text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-darker-blue transition-colors">
+                                    영상 보기
+                                </button>
+                                <button onclick="openBulletinModal('https://via.placeholder.com/800x1200/3d5a80/ffffff?text=주보+샘플')"
+                                    class="flex-1 border border-dark-blue text-dark-blue px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors">
+                                    주보 보기
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    // 캐러셀 초기화
+                    initSermonCarousel();
+                    return;
+                }
+
+                // 구글 드라이브 링크 변환 및 설교 데이터 정렬
+                const sermons = [];
+
+                dataRows.forEach(columns => {
+                    if (columns.length >= 4) {
+                        const date = columns[0].trim();
+                        const title = columns[1].trim();
+
+                        if (date && title) {
+                            sermons.push({
+                                date: date,
+                                title: title,
+                                speaker: columns[2].trim(),
+                                videoUrl: columns[3].trim(),
+                                bulletinUrl: columns.length >= 5 ? columns[4].trim() : ''
+                            });
+                        }
+                    }
+                });
+
+                // 날짜 최신순 정렬 (내림차순)
+                sermons.sort((a, b) => {
+                    const dateA = new Date(a.date.replace(/\./g, '-'));
+                    const dateB = new Date(b.date.replace(/\./g, '-'));
+                    return dateB - dateA;
+                });
+
+                // 설교 카드 생성
+                let sermonsHTML = '';
+
+                sermons.forEach(sermon => {
+                    // 구글 드라이브 링크 자동 변환
+                    let bulletinUrl = sermon.bulletinUrl;
+                    if (bulletinUrl && bulletinUrl.includes('drive.google.com')) {
+                        // /file/d/ID/view 형식과 ?id=ID 형식 모두 처리
+                        let fileId = '';
+                        if (bulletinUrl.includes('/file/d/')) {
+                            fileId = bulletinUrl.split('/file/d/')[1].split('/')[0];
+                        } else if (bulletinUrl.includes('id=')) {
+                            fileId = bulletinUrl.split('id=')[1].split('&')[0];
+                        }
+
+                        if (fileId) {
+                            bulletinUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
+                        }
+                    }
+
+                    sermonsHTML += `
+                            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-2xl p-6 shadow-soft hover:shadow-soft-lg transition-shadow duration-200">
+                                <div class="text-sm text-dark-blue font-semibold mb-2">${sermon.date}</div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">${sermon.title}</h3>
+                                <p class="text-text-gray text-sm mb-4">${sermon.speaker}</p>
+                                <div class="flex gap-2">
+                                    <button onclick="openVideoModal('${sermon.videoUrl}')"
+                                        class="flex-1 bg-dark-blue text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-darker-blue transition-colors">
+                                        영상 보기
+                                    </button>
+                                    ${bulletinUrl ? `
+                                    <button onclick="openBulletinModal('${bulletinUrl}')"
+                                        class="flex-1 border border-dark-blue text-dark-blue px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors">
+                                        주보 보기
+                                    </button>
+                                    ` : `
+                                    <button disabled
+                                        class="flex-1 border border-gray-300 text-gray-400 px-4 py-2 rounded-xl text-sm font-medium cursor-not-allowed">
+                                        주보 없음
+                                    </button>
+                                    `}
+                                </div>
+                            </div>
+                        `;
+                });
+
+                // 컨테이너에 설교 카드 삽입
+                container.innerHTML = sermonsHTML;
+
+                // 캐러셀 초기화
+                initSermonCarousel();
+
+            } catch (error) {
+                console.error('설교 데이터 로드 실패:', error);
+                container.innerHTML = `
+                    <div class="w-full text-center py-12">
+                        <p class="text-red-600">설교 목록을 불러오는데 실패했습니다.</p>
+                        <p class="text-sm text-gray-500 mt-2">잠시 후 다시 시도해주세요.</p>
+                    </div>
+                `;
+            }
+        }
+
+
+        // 강력한 CSV 파서 (줄바꿈이 포함된 셀 처리 가능)
+        function parseCSV(text) {
+            const rows = [];
+            let currentRow = [];
+            let currentCell = '';
+            let inQuotes = false;
+
+            // 라인 엔딩 정규화
+            text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const nextChar = text[i + 1];
+
+                if (char === '"') {
+                    if (inQuotes && nextChar === '"') {
+                        currentCell += '"';
+                        i++; // 이스케이프된 따옴표 건너뛰기
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    currentRow.push(currentCell);
+                    currentCell = '';
+                } else if (char === '\n' && !inQuotes) {
+                    currentRow.push(currentCell);
+                    rows.push(currentRow);
+                    currentRow = [];
+                    currentCell = '';
+                } else {
+                    currentCell += char;
+                }
+            }
+            // 마지막 데이터 처리
+            if (currentCell || currentRow.length > 0) {
+                currentRow.push(currentCell);
+                rows.push(currentRow);
+            }
+
+            // 후리기: 따옴표 제거 및 이스케이프 처리
+            return rows.map(row => row.map(cell => {
+                let clean = cell.trim();
+                // 앞뒤가 따옴표로 감싸져 있고, 내부에 따옴표가 없는 경우 (단순 감싸기)
+                // 하지만 Google Sheets는 따옴표 안에 콤마나 줄바꿈이 있으면 무조건 감쌈.
+                // 정석대로: 맨 앞뒤 따옴표 제거만 수행 (내부 ""는 이미 위에서 처리 안함.. 아 위에서 "" -> " 변환 안했음. 여기서 해야함)
+
+                // 위 루프에서 "" -> " 변환을 안하고 그대로 뒀으므로 여기서 처리 필요.
+                // 논리 수정: 위 루프에서는 ""를 그대로 currentCell에 넣었음 ("").
+                // 따라서 여기서 로직:
+                if (clean.startsWith('"') && clean.endsWith('"')) {
+                    clean = clean.slice(1, -1);
+                    clean = clean.replace(/""/g, '"'); // 이스케이프된 따옴표 복원
+                }
+                return clean;
+            }));
+        }
+
+        // 교회 소식 데이터 로드 (기존 교회 소개 탭 GID 재사용)
+        async function loadChurchNewsFromGoogleSheets() {
+            const spreadsheetId = '1zCHw0QEoPE-qYqC0kXTbK7jtjfsdF4lgg293yZGF0K0';
+            const sheetGid = '1656165138'; // 교회 소식용으로 변경 (구 교회 소개 탭)
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&gid=${sheetGid}&timestamp=${Date.now()}`;
+
+            const container = document.getElementById('newsContainer');
+            if (!container) return;
+
+            try {
+                const response = await fetch(csvUrl);
+                const csvText = await response.text();
+
+                // parseCSV 사용 (헤더 제외하고 처리하려면 전체 파싱 후 slice)
+                const allRows = parseCSV(csvText);
+                const rows = allRows.slice(1); // 헤더 제거
+
+                if (rows.length === 0) {
+                    container.innerHTML = '<div class="col-span-full text-center text-gray-500">등록된 소식이 없습니다.</div>';
+                    return;
+                }
+
+                let newsHTML = '';
+
+                rows.forEach(columns => {
+                    // 빈 행 체크
+                    if (columns.length === 0 || (columns.length === 1 && columns[0] === '')) return;
+
+                    if (columns.length >= 3) {
+                        // 사용자 요청: A:분류, B:제목, C:내용(상세), D:날짜(옵션), E:이미지(옵션)
+                        const category = columns[0];
+                        const title = columns[1];
+                        const content = columns[2]; // C열: 내용 (팝업/요약 공통)
+                        const date = columns.length > 3 ? columns[3] : ''; // D열: 날짜
+                        const imageUrl = columns.length > 4 ? columns[4] : ''; // E열: 이미지
+
+                        // 카테고리별 색상
+                        let badgeColor = 'bg-dark-blue';
+                        if (category.includes('행사')) badgeColor = 'bg-green-500';
+                        if (category.includes('갤러리')) badgeColor = 'bg-purple-500';
+                        if (category.includes('기도')) badgeColor = 'bg-yellow-500'; // 기도요청 추가 대응
+
+                        newsHTML += `
+                            <div onclick="openSimpleModal('${title}', \`${content}\`, '${imageUrl}')"
+                                class="bg-soft-gray rounded-2xl p-6 hover:shadow-soft-lg transition-shadow duration-200 cursor-pointer relative group">
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="inline-block ${badgeColor} text-white text-xs px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">${category}</span>
+                                    <span class="text-sm text-text-gray text-right ml-2">${date}</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 mt-1">${title}</h3>
+                                <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">${content}</p>
+                                <span class="text-dark-blue text-sm font-semibold hover:underline">자세히 보기 →</span>
+                            </div>
+                        `;
+                    }
+                });
+
+                container.innerHTML = newsHTML;
+
+            } catch (error) {
+                console.error('교회 소식 로드 실패:', error);
+            }
+        }
+
+        // 부서 소개 데이터 로드 (Google Sheets + 인원 정보 추가)
+        async function loadDepartmentsFromGoogleSheets() {
+            const spreadsheetId = '1zCHw0QEoPE-qYqC0kXTbK7jtjfsdF4lgg293yZGF0K0';
+            const sheetGid = '506653668'; // 부서 소개 탭 GID
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&gid=${sheetGid}&timestamp=${Date.now()}`;
+
+            const container = document.getElementById('departmentsContainer');
+
+            try {
+                const response = await fetch(csvUrl);
+                const csvText = await response.text();
+                // parseCSV 사용
+                const allRows = parseCSV(csvText);
+                const rows = allRows.slice(1);
+
+                if (rows.length === 0) {
+                    container.innerHTML = '<div class="col-span-full text-center text-gray-500">부서 정보가 없습니다.</div>';
+                    return;
+                }
+
+                let deptsHTML = '';
+
+                rows.forEach(columns => {
+                    // 빈 행 체크
+                    if (columns.length === 0 || (columns.length === 1 && columns[0] === '')) return;
+
+                    if (columns.length >= 3) {
+                        const name = columns[0];
+                        const icon = columns[1] || '🎯';
+                        const shortDesc = columns[2];
+                        const longDesc = columns.length > 3 ? columns[3] : shortDesc;
+                        const imageUrl = columns.length > 4 ? columns[4] : '';
+                        const members = columns.length > 5 ? columns[5] : ''; // F열: 부원
+                        const head = columns.length > 6 ? columns[6] : '';    // G열: 부장
+
+                        deptsHTML += `
+                            <div onclick="openDepartmentModal('${name}', '${icon}', \`${longDesc}\`, '${imageUrl}', '${members}', '${head}')"
+                                class="bg-white rounded-2xl p-6 text-center hover:shadow-soft-lg transition-shadow duration-200 cursor-pointer relative group">
+                                <div class="text-4xl mb-3 transform group-hover:scale-110 transition-transform duration-200">${icon}</div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">${name}</h3>
+                                <p class="text-sm text-gray-600 mb-3">${shortDesc}</p>
+                                <div class="space-y-1">
+                                    ${head ? `<div class="text-xs font-semibold text-dark-blue">부장: ${head}</div>` : ''}
+                                    ${members ? `<div class="text-xs text-gray-500">부원: ${members}</div>` : ''}
+                                </div>
+                            </div>
+                       `;
+                    }
+                });
+
+                container.innerHTML = deptsHTML;
+
+            } catch (error) {
+                console.error('부서 소개 로드 실패:', error);
+                container.innerHTML = '<div class="col-span-full text-center text-red-500">부서 정보를 불러오지 못했습니다.</div>';
+            }
+        }
+
+        // 교회 소개(비전, 사명, 가치) 데이터 로드 - 신규
+        async function loadVisionMissionFromGoogleSheets() {
+            const spreadsheetId = '1zCHw0QEoPE-qYqC0kXTbK7jtjfsdF4lgg293yZGF0K0';
+            const sheetGid = '1456597366'; // 교회 소개(비전/사명) 탭 GID
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&gid=${sheetGid}&timestamp=${Date.now()}`;
+
+            const container = document.getElementById('churchIntroContainer');
+            if (!container) return;
+
+            try {
+                const response = await fetch(csvUrl);
+                const csvText = await response.text();
+                // parseCSV 사용
+                const allRows = parseCSV(csvText);
+                const rows = allRows.slice(1);
+
+                if (rows.length === 0) {
+                    container.innerHTML = '<div class="col-span-full text-center text-gray-500">정보가 없습니다.</div>';
+                    return;
+                }
+
+                let introHTML = '';
+
+                rows.forEach(columns => {
+                    if (columns.length === 0 || (columns.length === 1 && columns[0] === '')) return;
+
+                    if (columns.length >= 3) {
+                        // A:제목, B:아이콘, C:내용
+                        const title = columns[0];
+                        const icon = columns[1] || '✨';
+                        const content = columns[2];
+
+                        introHTML += `
+                            <div class="bg-soft-gray rounded-2xl p-8 text-center hover:shadow-soft-lg transition-shadow duration-200 h-full">
+                                <div class="text-5xl mb-4">${icon}</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">${title}</h3>
+                                <p class="text-gray-600 leading-relaxed whitespace-pre-wrap">${content}</p>
+                            </div>
+                        `;
+                    }
+                });
+
+                container.innerHTML = introHTML;
+
+            } catch (error) {
+                console.error('교회 소개 로드 실패:', error);
+
+                // 에러 발생 시 fallback (기존 정적 콘텐츠와 유사하게)
+                container.innerHTML = `
+                   <div class="col-span-full text-center text-red-500">
+                        데이터를 불러오지 못했습니다.
+                <div class="modal-content" style="max-width: 600px;">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">${icon}</div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">${name}</h2>
+                    </div>
+                    ${infoSection}
+                    ${imageSection}
+                    <div class="bg-gray-50 rounded-xl p-6 text-left">
+                        <h4 class="font-bold text-gray-800 mb-2">부서 소개</h4>
+                        <div class="text-gray-700 whitespace-pre-wrap leading-relaxed">
+                            ${description.replace(/\\n/g, '<br>')}
+                        </div>
+                    </div>
+                </div>
+            `;
+                document.body.appendChild(modal);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // 봉사 당번 데이터 로드 (식사, 청소) - 신규
+        async function loadDutyFromGoogleSheets() {
+            const spreadsheetId = '1zCHw0QEoPE-qYqC0kXTbK7jtjfsdF4lgg293yZGF0K0';
+            const sheetGid = '844223961'; // 봉사 당번 탭 GID
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&gid=${sheetGid}&timestamp=${Date.now()}`;
+
+            const container = document.getElementById('dutyContainer');
+            const dateSpan = document.getElementById('dutyDate');
+            if (!container) return;
+
+            try {
+                console.log('Fetching Duty CSV...'); // 디버깅 로그
+                const response = await fetch(csvUrl);
+                if (!response.ok) {
+                    console.error('Duty fetch failed:', response.status);
+                    return;
+                }
+                const csvText = await response.text();
+                // console.log('Duty CSV:', csvText); // 보안상 전체 로그는 생략 가능하지만 디버깅 위해 필요시 확인
+
+                const allRows = parseCSV(csvText);
+                const rows = allRows.slice(1);
+
+                console.log('Duty Rows:', rows.length); // 디버깅 로그
+
+                if (rows.length === 0) {
+                    console.warn('Duty rows are empty.');
+                    return;
+                }
+
+                // 첫 번째 줄(Row)만 사용
+                const firstRow = rows[0];
+                if (firstRow.length >= 3) {
+                    const date = firstRow[0]; // A열: 날짜
+                    const mealDuty = firstRow[1]; // B열: 식사 당번
+                    const cleaningDuty = firstRow[2]; // C열: 청소 당번
+                    const note = firstRow.length > 3 ? firstRow[3] : ''; // D열: 메모
+
+                    // 날짜 표시
+                    if (date && dateSpan) {
+                        dateSpan.textContent = `(${date})`;
+                    }
+
+                    // 이후 일정 목록 생성 (최대 4주치 정도) - 식사/청소 분리
+                    let upcomingMealHTML = '';
+                    let upcomingCleaningHTML = '';
+
+                    if (rows.length > 1) {
+                        // 1번 인덱스(다음주)부터 시작
+                        for (let i = 1; i < Math.min(rows.length, 5); i++) {
+                            const row = rows[i];
+                            if (row.length < 3) continue;
+                            const uDate = row[0];
+                            const uMeal = row[1];
+                            const uCleaning = row[2];
+
+                            upcomingMealHTML += `\n• ${uDate}: ${uMeal}`;
+                            upcomingCleaningHTML += `\n• ${uDate}: ${uCleaning}`;
+                        }
+
+                        if (upcomingMealHTML) upcomingMealHTML = '\n\n➖➖➖➖➖➖➖➖\n📅 <b>이후 식사 당번</b>' + upcomingMealHTML;
+                        if (upcomingCleaningHTML) upcomingCleaningHTML = '\n\n➖➖➖➖➖➖➖➖\n📅 <b>이후 청소 당번</b>' + upcomingCleaningHTML;
+                    }
+
+                    // 상세 내용 분리
+                    const mealContent = `📅 날짜: ${date}\n\n🍚 <b>이번 주 식사 당번</b>:\n${mealDuty || '없음'}\n\n📝 메모:\n${note || '없음'}${upcomingMealHTML}`;
+                    const cleaningContent = `📅 날짜: ${date}\n\n🧹 <b>이번 주 청소 당번</b>:\n${cleaningDuty || '없음'}\n\n📝 메모:\n${note || '없음'}${upcomingCleaningHTML}`;
+
+                    // 당번 카드 업데이트
+                    container.innerHTML = `
+                        <!-- 식사 당번 -->
+                        <div onclick="openSimpleModal('식사 당번 안내', \`${mealContent}\`)" 
+                             class="bg-soft-gray rounded-2xl p-6 flex items-center justify-between hover:shadow-soft-lg transition-shadow cursor-pointer group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🍚</div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">식사 당번</h3>
+                                    <p class="text-gray-600 mt-1 font-medium line-clamp-1">${mealDuty || '정보 없음'}</p>
+                                </div>
+                            </div>
+                            <span class="text-gray-400 text-sm group-hover:text-dark-blue transition-colors">더보기 →</span>
+                        </div>
+                        <!-- 청소 당번 -->
+                        <div onclick="openSimpleModal('청소 당번 안내', \`${cleaningContent}\`)"
+                             class="bg-soft-gray rounded-2xl p-6 flex items-center justify-between hover:shadow-soft-lg transition-shadow cursor-pointer group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🧹</div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">청소 당번</h3>
+                                    <p class="text-gray-600 mt-1 font-medium line-clamp-1">${cleaningDuty || '정보 없음'}</p>
+                                </div>
+                            </div>
+                            <span class="text-gray-400 text-sm group-hover:text-dark-blue transition-colors">더보기 →</span>
+                        </div>
+                    `;
+                } else {
+                    console.warn('First row length insufficient:', firstRow.length);
+                }
+
+            } catch (error) {
+                console.error('봉사 당번 로드 실패:', error);
+            }
+        }
+
+        // 일반 텍스트 모달 (교회 소개용)
+        function openSimpleModal(title, content, imageUrl) {
+            // 주보 모달 재사용
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+
+            // 이미지 처리
+            let imageSection = '';
+            if (imageUrl) {
+                // 드라이브 링크 변환 로직
+                if (imageUrl.includes('drive.google.com')) {
+                    const fileId = imageUrl.split('/d/')[1]?.split('/')[0];
+                    if (fileId) imageUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
+                }
+                imageSection = `<img src="${imageUrl}" class="w-full h-auto rounded-xl mb-6 shadow-sm" onerror="this.style.display='none'">`;
+            }
+
+            modal.innerHTML = `
+                <div class="modal-content" style="max-width: 600px;">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">${title}</h2>
+                    ${imageSection}
+                    <div class="prose prose-blue max-w-none text-gray-700 whitespace-pre-wrap leading-relaxed text-left">
+                        ${content.replace(/\\n/g, '<br>')}
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+
+            // 이벤트 버블링 방지 (부모 클릭 방지)
+            event.stopPropagation();
+        }
+
+        // 부서 상세 모달
+        function openDepartmentModal(name, icon, description, imageUrl, members, head) {
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+
+            // 이미지 처리
+            let imageSection = '';
+            if (imageUrl && imageUrl.length > 5) {
+                if (imageUrl.includes('drive.google.com')) {
+                    const fileId = imageUrl.split('/d/')[1]?.split('/')[0];
+                    if (fileId) imageUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
+                }
+                imageSection = `<img src="${imageUrl}" class="w-full h-64 object-cover rounded-xl mb-6 shadow-sm" onerror="this.style.display='none'">`;
+            }
+
+            // 부장, 부원 정보 표시용 HTML
+            let infoSection = '';
+            if (head || members) {
+                infoSection = `
+                    <div class="bg-blue-50 rounded-xl p-4 mb-6 text-left space-y-2">
+                        ${head ? `<div class="flex items-start gap-2"><span class="font-bold text-dark-blue min-w-[3rem]">부장</span> <span class="text-gray-700">${head}</span></div>` : ''}
+                        ${members ? `<div class="flex items-start gap-2"><span class="font-bold text-dark-blue min-w-[3rem]">부원</span> <span class="text-gray-700">${members}</span></div>` : ''}
+                    </div>
+                `;
+            }
+
+            modal.innerHTML = `
+                <div class="modal-content" style="max-width: 600px;">
+                    <button class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto'">&times;</button>
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">${icon}</div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">${name}</h2>
+                    </div>
+                    ${infoSection}
+                    ${imageSection}
+                    <div class="bg-gray-50 rounded-xl p-6 text-left">
+                        <h4 class="font-bold text-gray-800 mb-2">부서 소개</h4>
+                        <div class="text-gray-700 whitespace-pre-wrap leading-relaxed">
+                            ${description.replace(/\\n/g, '<br>')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 페이지 로드 시 초기화
+        window.addEventListener('load', () => {
+            loadSermonsFromGoogleSheets();
+            loadChurchNewsFromGoogleSheets();
+            loadDepartmentsFromGoogleSheets();
+            loadVisionMissionFromGoogleSheets();
+            loadDutyFromGoogleSheets(); // 봉사 당번 로드 추가
+        });
+
+        // 설교 캐러셀 초기화
+        function initSermonCarousel() {
+            const container = document.getElementById('sermonContainer');
+            const prevBtn = document.getElementById('prevSermon');
+            const nextBtn = document.getElementById('nextSermon');
+
+            const cards = container.querySelectorAll('.flex-shrink-0');
+            const totalCards = cards.length;
+
+            // 3개 이하면 버튼 숨기기
+            if (totalCards <= 3) {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+                return;
+            }
+
+            // 버튼 표시
+            prevBtn.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+
+            let currentIndex = 0;
+            const cardsPerView = 3;
+            const maxIndex = totalCards - cardsPerView;
+
+            function updateCarousel() {
+                // 각 카드의 너비 + gap 계산
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 24; // gap-6 = 1.5rem = 24px
+                const translateX = currentIndex * (cardWidth + gap);
+
+                container.style.transform = `translateX(-${translateX}px)`;
+
+                // 버튼 활성화/비활성화
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= maxIndex;
+
+                if (currentIndex === 0) {
+                    prevBtn.style.opacity = '0.5';
+                    prevBtn.style.cursor = 'not-allowed';
+                } else {
+                    prevBtn.style.opacity = '1';
+                    prevBtn.style.cursor = 'pointer';
+                }
+
+                if (currentIndex >= maxIndex) {
+                    nextBtn.style.opacity = '0.5';
+                    nextBtn.style.cursor = 'not-allowed';
+                } else {
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.cursor = 'pointer';
+                }
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            // 초기 상태 설정
+            updateCarousel();
+        }
+    </script>
+
+</body>
+
+</html>
